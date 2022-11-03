@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url(../fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf);
+}
+
+
+body{
+    -webkit-print-color-adjust: exact !important;
+}
+
+/*CSS Header*/
+
+img{
+    width: 50%;
+    height: auto;
+    margin: 10px;
+}
+ul{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    
+}
+li{
+    display: inline-block;
+    padding-left: 40px;
+}
+li::after{
+    content: "\025bc";
+    padding-left: 10px;
+    color: rgb(32, 182, 228);
+}
+header {
+    background-color: rgb(238, 238, 172);
+}
+a:first-of-type{
+    color:yellow;
+}
+a:nth-of-type(2){
+    color: green;
+}
+a:nth-of-type(3){
+    color:crimson;
+}
+a:last-of-type{
+    color:cornflowerblue;
+}
+a:visited{
+    color: blue;
+}
+a:hover{
+    color: black;
+}
+
+/*CSS Main*/
+h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+h1,h2{
+    color: green;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+main{
+    background-color: beige;
+    height: 700px;
+}
+   
+/*CSS Footer*/
+footer{
+    background-color: rgb(238, 238, 172);
+    height: 100px;
+}
+
+footer div p:first-of-type{
+    font-weight: bold;
+    padding-top: 10px;
+    
+}
+footer div p{
+    text-align: center;
+}
+footer div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer div:nth-child(2) p{
+    align-self: flex-start;
+    
+}

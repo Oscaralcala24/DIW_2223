@@ -1,8 +1,0 @@
-@mixin posicion($top, $left) {
-    left: $top;
-    top: $left;
-}
-
-@mixin border($px) {
-    border: #{$px} solid #ccc !important;
-}

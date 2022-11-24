@@ -1,0 +1,24 @@
+@mixin posicion($top, $left) {
+    left: $left;
+    top: $top;
+}
+
+@mixin border($px) {
+    border: #{$px} solid #ccc !important;
+}
+@mixin posicionAbsoluta(){
+    position: absolute;
+}
+
+@mixin colores($color,$colorFondo) {
+    color: #{$color} !important;
+    background-color: #{$colorFondo} !important;
+}
+
+@mixin color($color) {
+    color: #{$color} !important;
+}
+@mixin colorBorde($colorBorde) {
+    border-color: #{$colorBorde} !important;
+}
+

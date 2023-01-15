@@ -1,0 +1,13 @@
+header{
+    background-color: rgb(141, 244, 213);
+}
+nav{
+    background-color: rgb(234, 234, 234);
+}
+li{
+    width: 15%;
+}
+img{
+    width: 100%;
+    padding: 5%;
+}

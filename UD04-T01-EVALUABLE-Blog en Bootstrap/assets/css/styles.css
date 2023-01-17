@@ -5,9 +5,22 @@ nav{
     background-color: rgb(234, 234, 234);
 }
 li{
-    width: 15%;
+    width: 10%;
 }
 img{
     width: 100%;
     padding: 5%;
+}
+li a p{
+    white-space: nowrap;
+}
+li a img{
+    width: 30%;
+}
+
+
+@media only screen and (max-width: 768px){
+    li{
+        width: 100%;
+    }
 }

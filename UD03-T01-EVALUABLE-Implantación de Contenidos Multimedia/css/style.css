@@ -12,7 +12,7 @@
 
 
 /*--------------------Contenedor Principal----------------------------*/
-#container{
+.container{
     display: grid;
     width: 100%;
     margin: auto;
@@ -46,23 +46,42 @@ nav{
     grid-column: 1/3;
     grid-row: 2;
     height: 100%;
-    background-color: #536894;
+    background-color: #f13737;
 }
-ul{
+nav ul{
     list-style: none;
     display: flex;
-    column-gap: 50px;
+    column-gap: 30px;
     justify-content: space-between;
     margin-top: 0%;
 }
-li{
+nav ul li{
+    padding-top: 20px;
     text-align: center;
+    width: 12%;
 }
 li:last-child{
-    margin-right: 30px;
+    text-align: start;
 }
 li:first-child,li:nth-child(5){
     margin-left: auto;
+}
+li span img{
+    width: 13%;
+    margin: 0px;
+    margin-right: 4%;
+}
+
+li p{
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    height: auto;
+}
+nav li i{
+    color: #536894;
+    padding: 0%;
+    padding-right: 5px;
 }
 
 
@@ -94,7 +113,14 @@ hr{
 article{
     padding: 20px;
 }
-
+#articulo1 section ul li,#articulo1 footer ul li {
+    margin: 20px;
+    margin-left: 40px;
+}
+#articulo2 section ul li,#articulo2 footer ul li {
+    margin: 20px;
+    margin-left: 40px;
+}
 
 /*------------------------4.Sidebar-----------------------------*/
 
@@ -107,20 +133,10 @@ article{
     padding-top: 20px;
     align-items: flex-end;
     width: 500px;
+    text-align: center;
 }
-
-
-.contenedor-responsivo {
-    position: relative;
-    overflow: hidden;
-}
-.iframe-responsivo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+#sidebar img{
+    width: 70%;
 }
 h2{
     text-align: center;
@@ -172,8 +188,9 @@ i{
 }
 
 
-svg{
-    margin:10px !important;
+footer img{
+    width: 5%;
+    margin: auto;
 }
 
 
@@ -198,5 +215,57 @@ svg{
     #headerP img{
     margin: auto;    
     margin-bottom: 10px;
+    }   
+    span{
+        display: none;
+    }
 }
+
+
+
+/*------------------------Mostrar Video-----------------------------
+*
+*/
+.oculto{
+    display: none;
 }
+video{
+    width: 100%;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  #content h1 {
+    padding: 20px;
+    background-color: #536894;
+    border-radius: 100%;
+    position: fixed;
+    height: auto;
+    right: 100px;
+    top: 20px;
+    color: rgb(215, 213, 213);
+  }  
+  #content h1:hover {
+    cursor: pointer;
+    color: rgb(148, 148, 148);
+  }
+  .animacion {
+    width:100%;
+    height: 100px;
+    background: #536894;
+    position: fixed;
+    bottom: 50px;
+    animation: mymove 5s ;
+  }
+  div div h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+  }
+  
+  @keyframes mymove {
+    from {bottom: 100%;}
+    to {bottom: 50px;}
+  }

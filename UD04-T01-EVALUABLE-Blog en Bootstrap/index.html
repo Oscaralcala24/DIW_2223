@@ -5,67 +5,125 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
         <link rel="stylesheet" href="assets/css/styles.css">
         <title>Document</title>
     </head>
     <body>
         <div class="container-fluid">
-            <head>
-                <header class="row sticky-top">
-                    <div class="col-2">
-                        <img src="assets/img/image.svg" alt="">
-                    </div>
-                    <div class="col-8">
-                      <h1 class="text-center pt-4">WeRunning</h1>
-                    </div>
-                </header>
-                <div class="row">
-                    <nav class="navbar justify-content-end navbar-expand-md navbar-light bg-light ">
-                        <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <header class="row sticky-top">
+                <div class="col-12 text-center">
+                    <img class="p-2 ps-3" src="assets/img/image.svg" alt="">
+                </div>
+                <div class="col-12 d-none d-md-inline">
+                    <h2 class="text-center ">WeRunning</h2>
+                </div>
+            </header>
+            <div class="row">
+                <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse gx-5" id="navbarNav">
-                            <ul class="navbar-nav w-100 justify-content-center py-0">
-                                <li class="d-flex align-items-center justify-content-md-center justify-content-center nav-item active py-0 me-4 text-center">
-                                    <a class="nav-link w-auto" href="#">Login</a>
+                        <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 col-sm-8 col-12 text-center">
+                                <li class="nav-item w-25 text-center mx-auto">
+                                    <a class="nav-link" href="#">Login</a>
                                 </li>
-                                <li class="d-flex align-items-center justify-content-md-center justify-content-center nav-item py-0 text-center">
-                                    <a class="nav-link w-auto" href="#">Registro</a>
+                                <li class="nav-item w-25 text-center mx-auto">
+                                    <a class="nav-link" href="#">Registro</a>
                                 </li>
-                                <li class="d-flex align-items-center justify-content-md-center justify-content-center nav-item py-0 text-center">
-                                    <a class="nav-link w-auto" href="#">Entradas</a>
+                                <li class="nav-item w-25 text-center mx-auto">
+                                    <a class="nav-link" href="#">Entradas</a>
                                 </li>
-                                <li class="d-flex align-items-center justify-content-md-center justify-content-center nav-item py-0 text-center">                                   
-                                    <a class="nav-link w-auto" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                                        </svg>
-                                        Crear Evento                                       
-                                    </a>
-                                </li>
-                                <li class="collapse collapse-horizontal w-auto align-items-center justify-content-md-center justify-content-end" id="busqueda">
-                                    <div class="search text-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" type="button" data-bs-toggle="collapse" data-bs-target="#busqueda" width="16" height="16" fill="currentColor" class="bi bi-x-sm" viewBox="0 0 16 16">
-                                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-                                        </svg>
-                                        
-                                        <input type="text" class="form-control w-auto d-inline" placeholder="Buscar...">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" role="button" class="bi bi-search" viewBox="0 0 16 16">
-                                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                        </svg>
-                                    </div>
-                                </li>
-                                <li class="collapse show text-center" id="busqueda">    
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" data-bs-toggle="collapse" href="#busqueda" aria-expanded="false" aria-controls="busqueda" role="button" class="bi bi-search mt-2" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>                                
+                                <li class="nav-item w-25 text-center mx-auto">
+                                    <a class="nav-link" href="#">
+                                        <i class="bi bi-plus-circle-fill me-2"></i>Crear nueva entrada</a>
                                 </li>
                             </ul>
+                            <div class="col-sm-4 col-12 d-flex align-items-center justify-content-center justify-content-sm-start flex-column flex-sm-row">
+                                <i class="bi bi-search mx-sm-4 my-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"></i>
+                                <div class="collapse m-auto" id="collapseExample">
+                                  <form class="d-flex m-auto" id="collapseExample">
+                                      <input class="form-control me-2 d-inline" type="search" placeholder="Search" aria-label="Search">
+                                      <button type="button" class="btn btn-primary d-inline">
+                                          <i class="bi bi-search"></i>
+                                      </button>
+                                  </form>
+                                </div>
+                            </div>
+
                         </div>
-                    </nav>
+                    </div>
+                </nav>
+            </div>
+            <div class="row container mx-auto">
+                <div class="col-12">
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item active m-1 ms-3" aria-current="page">Home</li>
+                    </ol>
+                  </nav>
                 </div>
-            </head>
+            </div>
+            <main class="row">
+                <div class="col-md-8 col-12">
+
+                </div>
+                <div class="col-md-4 col-12">
+                    <aside>
+                        <div class="mx-auto">
+                            <iframe class="mx-auto w-100" id="twitter-widget-1 iframe-responsivo" scrolling="yes" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style=" visibility: visible;;height: 700px; display: block; margin-right: 10px;" title="Twitter Timeline" src="https://syndication.twitter.com/srv/timeline-profile/screen-name/RunningQuotes?dnt=false&amp;embedId=twitter-widget-1&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2Vuc2l0aXZlX21lZGlhX2ludGVyc3RpdGlhbF8xMzk2MyI6eyJidWNrZXQiOiJpbnRlcnN0aXRpYWwiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2V4cGVyaW1lbnRzX2Nvb2tpZV9leHBpcmF0aW9uIjp7ImJ1Y2tldCI6MTIwOTYwMCwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19ibHVlX3ZlcmlmaWVkX2JhZGdlIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2Zyb250ZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH19&amp;frame=false&amp;hideBorder=false&amp;hideFooter=false&amp;hideHeader=false&amp;hideScrollBar=false&amp;lang=en&amp;origin=https%3A%2F%2Fpublish.twitter.com%2F%23&amp;sessionId=cc6471aa300121ce7ad2d3a1200352370c07588f&amp;showHeader=true&amp;showReplies=false&amp;transparent=false&amp;widgetsVersion=a3525f077c700%3A1667415560940"></iframe>
+                        </div>
+                        <div >
+                            <h4 class="mx-auto mt-5 mb-3  text-center">Siguenos en nuestras Redes Sociales</h4>
+                            <div class="d-flex justify-content-between w-50 mx-auto">
+                                <i class="bi bi-instagram redes-sociales "></i>
+                                <i class="bi bi-twitter redes-sociales"></i>
+                                <i class="bi bi-twitch redes-sociales"></i>
+                            </div>
+                        </div>
+                    </aside>
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="assets/img/foto1.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h5>First slide label</h5>
+                              <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item" data-bs-interval="2000">
+                            <img src="assets/img/foto2.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h5>Second slide label</h5>
+                              <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="..." class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h5>Third slide label</h5>
+                              <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>  
+                </div>
+            </main>
         </div>
     </body>
     <script src="assets/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>

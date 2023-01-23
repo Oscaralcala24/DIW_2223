@@ -4,12 +4,9 @@ header{
 nav{
     background-color: rgb(234, 234, 234);
 }
-li{
-    width: 10%;
-}
-img{
-    width: 100%;
-    padding: 5%;
+header div img{
+    min-width: 125px;
+    max-width: 175px;
 }
 li a p{
     white-space: nowrap;
@@ -17,10 +14,8 @@ li a p{
 li a img{
     width: 30%;
 }
+.redes-sociales{
+    font-size: 2em;
+  }
 
 
-@media only screen and (max-width: 768px){
-    li{
-        width: 100%;
-    }
-}

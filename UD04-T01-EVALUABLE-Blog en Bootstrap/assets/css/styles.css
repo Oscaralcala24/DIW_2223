@@ -1,6 +1,15 @@
 header, footer{
     background-color: rgb(141, 244, 213);
 }
+footer{
+    background-color: black;
+}
+footer p,footer li,footer h4{
+    color: white !important;
+}
+footer p,footer li{
+    font-size: 0.8rem;
+}
 nav{
     background-color: rgb(234, 234, 234);
 }
@@ -21,4 +30,14 @@ li a img{
 
 .modal-body p a{
     font-size: 0.7rem;
+}
+.boton-registro{
+    width: 40%;
+}
+footer hr{
+    color: white;
+}
+.entrada{
+    background-color: aquamarine;
+    border-radius: 20px;
 }

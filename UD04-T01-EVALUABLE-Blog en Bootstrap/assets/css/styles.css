@@ -1,4 +1,4 @@
-header{
+header, footer{
     background-color: rgb(141, 244, 213);
 }
 nav{
@@ -19,3 +19,6 @@ li a img{
   }
 
 
+.modal-body p a{
+    font-size: 0.7rem;
+}

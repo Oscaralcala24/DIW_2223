@@ -51,6 +51,9 @@ footer hr{
 i span{
     font-style: normal;
 }
+.carousel-caption h5,.carousel-caption p{
+    opacity: 0.7;
+}
 
 
 

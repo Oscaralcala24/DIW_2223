@@ -38,6 +38,43 @@ footer hr{
     color: white;
 }
 .entrada{
-    background-color: aquamarine;
+    background-color:  rgb(234, 234, 234);
     border-radius: 20px;
+    
+}
+.entrada h4{
+    font-size: 3.5vw;
+}
+.entrada p, .entrada a{
+    font-size: 2.5vw;
+}
+i span{
+    font-style: normal;
+}
+
+
+
+@media screen and (min-width:576px){
+    .entrada h4{
+        font-size: 2.5vw;
+    }
+    .entrada p, .entrada a{
+        font-size: 2vw;
+    }
+}
+@media screen and (min-width:768px){
+    .entrada h4{
+        font-size: 2vw;
+    }
+    .entrada p, .entrada a{
+        font-size: 1.5vw;
+    }
+}
+@media screen and (min-width:992px){
+    .entrada h4{
+        font-size: 1.4vw;
+    }
+    .entrada p, .entrada a{
+        font-size: 0.7vw;
+    }
 }

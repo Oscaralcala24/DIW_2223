@@ -1,246 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <script defer src="assets/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
-        <script defer src="assets/js/utils.js"></script>
-        <title>Document</title>
-    </head>
-    <body>
-        <div class="container-fluid ">
-          
-            <header class="row sticky-top">
-                <div class="col-12 text-center">
-                    <img class="p-2 ps-3" src="assets/img/image.svg" alt="">
-                </div>
-                <div class="col-12 d-none d-md-inline">
-                    <h2 class="text-center ">WeRunning</h2>
-                </div>
-            </header>
-            <div class="row">
-                <nav class="navbar navbar-expand-sm navbar-light bg-light">
-                    <div class="container-fluid">
-                        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse row" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 col-sm-8 col-12 text-center">
-                                <li class="nav-item w-25 text-center mx-auto">
-                                    <a type="button" class="btn btn-link nav-link" data-bs-toggle="modal" data-bs-target="#login">Login</a>
-                                </li>
-                                <li class="nav-item w-25 text-center mx-auto">
-                                  <a href="./registro.html" type="button" class="btn btn-link nav-link">Registro</a>
-                                </li>
-                                <li class="nav-item w-25 text-center mx-auto">
-                                    <a href="./index.html" class="nav-link" href="#">Entradas</a>
-                                </li>
-                                <li class="nav-item w-25 text-center mx-auto">
-                                    <a class="nav-link" href="#">
-                                        <i class="bi bi-plus-circle-fill me-2"></i>Crear nueva entrada</a>
-                                </li>
-                            </ul>
-                            <div class="col-sm-4 col-12 d-flex align-items-center justify-content-center justify-content-sm-start flex-column flex-sm-row">
-                                <i class="bi bi-search mx-sm-4 my-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"></i>
-                                <div class="collapse m-auto" id="collapseExample">
-                                  <form class="d-flex m-auto" id="collapseExample">
-                                      <input class="form-control me-2 d-inline" type="search" placeholder="Search" aria-label="Search">
-                                      <button type="button" class="btn btn-primary d-inline">
-                                          <i class="bi bi-search"></i>
-                                      </button>
-                                  </form>
-                                </div>
-                            </div>
 
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <div class="row container mx-auto">
-                <div class="col-12">
-                  <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                      <li class="breadcrumb-item m-1 ms-3"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item active m-1 ms-3" aria-current="page">Entradas</li>
-                    </ol>
-                  </nav>
-                </div>
-            </div>
-            <main class="row">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
+  <script defer src="assets/js/utils.js"></script>
+  <title>Document</title>
+</head>
 
+<body>
+  <div class="container-fluid ">
 
-              
-
-
-                <div class="col-md-8 col-12 row">
-                  <div class="col-5 mx-auto entrada my-3">
-                    <h4 class="text-center mt-4">Españoles destacados en el Maratón de Sevilla</h4>
-                    <img class="w-75 mx-auto" src="./assets/img/entrada1.png" alt="entrada1">
-                    
-                  </div>
-                  <div class="col-5 mx-auto entrada my-3">
-                    <h4 class="text-center mt-4">321 kilómetros por un túnel oscuro</h4>
-                    <img class="w-75 mx-auto" src="./assets/img/entrada2.png" alt="entrada1">
-                  </div>
-                </div>
-                <div class="col-md-4 col-12">
-                    <aside>
-                        <div class="mx-auto d-none d-md-inline">
-                            <iframe class="mx-auto w-100" id="twitter-widget-1 iframe-responsivo" scrolling="yes" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style=" visibility: visible;;height: 700px; display: block; margin-right: 10px;" title="Twitter Timeline" src="https://syndication.twitter.com/srv/timeline-profile/screen-name/RunningQuotes?dnt=false&amp;embedId=twitter-widget-1&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2Vuc2l0aXZlX21lZGlhX2ludGVyc3RpdGlhbF8xMzk2MyI6eyJidWNrZXQiOiJpbnRlcnN0aXRpYWwiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2V4cGVyaW1lbnRzX2Nvb2tpZV9leHBpcmF0aW9uIjp7ImJ1Y2tldCI6MTIwOTYwMCwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19ibHVlX3ZlcmlmaWVkX2JhZGdlIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2Zyb250ZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH19&amp;frame=false&amp;hideBorder=false&amp;hideFooter=false&amp;hideHeader=false&amp;hideScrollBar=false&amp;lang=en&amp;origin=https%3A%2F%2Fpublish.twitter.com%2F%23&amp;sessionId=cc6471aa300121ce7ad2d3a1200352370c07588f&amp;showHeader=true&amp;showReplies=false&amp;transparent=false&amp;widgetsVersion=a3525f077c700%3A1667415560940"></iframe>
-                        </div>
-                        <div >
-                            <h4 class="mx-auto mt-5 mb-3  text-center">Siguenos en nuestras Redes Sociales</h4>
-                            <div class="d-flex justify-content-between w-50 mx-auto mb-3">
-                                <i class="bi bi-instagram redes-sociales "></i>
-                                <i class="bi bi-twitter redes-sociales"></i>
-                                <i class="bi bi-twitch redes-sociales"></i>
-                            </div>
-                        </div>
-                    </aside>
-                    <div id="carouselExampleDark" class="carousel carousel-dark slide col-10 col-md-12 mx-auto" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active" data-bs-interval="10000">
-                            <img src="assets/img/foto1.jpg" class="d-block w-100" alt="foto1">
-                            <div class="carousel-caption">
-                              <h5>First slide label</h5>
-                              <p>Some representative placeholder content for the first slide.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item" data-bs-interval="2000">
-                            <img src="assets/img/foto2.jpg" class="d-block w-100" alt="foto2">
-                            <div class="carousel-caption">
-                              <h5>Second slide label</h5>
-                              <p>Some representative placeholder content for the second slide.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="assets/img/foto3.jpg" class="d-block w-100" alt="foto3">
-                            <div class="carousel-caption">
-                              <h5>Third slide label</h5>
-                              <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>  
-                </div>
-            </main>
-            <footer class="row mt-4 pt-3">
-              <div class="row">
-                <div class="col-3 m-auto">
-                  <h4 class="text-center">Direccion:</h4>
-                  <p class="text-center">C/Ejemplo nº12 Sevilla (Camas)</p>
-                </div>
-                <div class="col-3 m-auto">
-                  <ul class="list-group-flush ps-0">
-                    <li class="list-group-item text-center">
-                      <a class="link-light" href="#">Login</a>
-                    </li>
-                    <li class="list-group-item text-center">
-                      <a class="link-light" href="./registro.html">Register</a>
-                    </li>
-                    <li class="list-group-item text-center">
-                      <a class="link-light" href="./index.html">Entradas</a>
-                    </li>
-                    <li class="list-group-item text-center">
-                      <a class="link-light" href="#">Crear Nueva Entrada</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-3 m-auto">
-                  <p class="text-center">
-                    #runners #instarunners #runnersworld #runnerslife #worlderunners #runnershigh <span class="d-none d-md-inline">#runnerspace #worldrunners #wearetherunners #trailrunners</span>   
-                  </p>
-        
-                </div>
-                <div class="col-3 m-auto">
-                  <ul class="list-group-flush ps-0">
-                    <li class="list-group-item text-center">
-                      Maratón
-                    </li>
-                    <li class="list-group-item text-center">
-                      Carreras Populares
-                    </li>
-                    <li class="list-group-item text-center">
-                      UltraMan
-                    </li>
-                    <li class="list-group-item text-center">
-                      Carrera Nocturna
-                    </li>
-                    <li class="list-group-item text-center">
-                      Trail
-                    </li>
-                  </ul>
-                </div>
-              </div>
-                <hr>
-              <div class="row">
-                <div class="col-12">
-                  
-                  <p class="text-center">
-                    <i class="bi bi-c-circle"></i>
-                    Oscar Alcala Espigares. Todos los derechos reservados
-                  </p>                
-                </div>
-                
-              </div>
-            </footer>
-        </div>
-        <!-- Modal Login -->
-        <div class=" modal fade modal-fullscreen-sm-down" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <form class="text-center">
-                  <label class=" mt-4 mb-2 form-label" for="Username">Nombre de usuario:</label><br>
-                  <input class="mx-auto w-50 form-control" type="text">
-                  <label class=" mt-4 mb-2 form-label" for="password">Contraseña:</label><br>
-                  <input class="mx-auto w-50 form-control" type="password">
-
-                  <div class="form-check my-4 text-center">
-                    <label class="form-check-label" for="invalidCheck">
-                      <input class="form-check-input" type="checkbox" >
-                      Mantener sesión iniciada
-                    </label>
-                  </div>
+    <header class="row sticky-top">
+      <div class="col-12 text-center">
+        <img class="p-2 ps-3" src="assets/img/image.svg" alt="">
+      </div>
+      <div class="col-12 d-none d-md-inline">
+        <h2 class="text-center ">WeRunning</h2>
+      </div>
+    </header>
+    <div class="row">
+      <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 col-sm-8 col-12 text-center">
+              <li class="nav-item w-25 text-center mx-auto">
+                <a type="button" class="btn btn-link nav-link" data-bs-toggle="modal" data-bs-target="#login">Login</a>
+              </li>
+              <li class="nav-item w-25 text-center mx-auto">
+                <a href="./registro.html" type="button" class="btn btn-link nav-link">Registro</a>
+              </li>
+              <li class="nav-item w-25 text-center mx-auto">
+                <a href="./index.html" class="nav-link" href="#">Entradas</a>
+              </li>
+              <li class="nav-item w-25 text-center mx-auto">
+                <a class="nav-link" href="#">
+                  <i class="bi bi-plus-circle-fill me-2"></i>Crear nueva entrada</a>
+              </li>
+            </ul>
+            <div
+              class="col-sm-4 col-12 d-flex align-items-center justify-content-center justify-content-sm-start flex-column flex-sm-row">
+              <i class="bi bi-search mx-sm-4 my-2" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                aria-expanded="false" aria-controls="collapseExample"></i>
+              <div class="collapse m-auto" id="collapseExample">
+                <form class="d-flex m-auto" id="collapseExample">
+                  <input class="form-control me-2 d-inline" type="search" placeholder="Search" aria-label="Search">
+                  <button type="button" class="btn btn-primary d-inline">
+                    <i class="bi bi-search"></i>
+                  </button>
                 </form>
-                <p class="text-center">
-                  <a class="mb-4 link-primary" href="#">He olvidado la contraseña</a>
-                </p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Login</button>
               </div>
             </div>
+
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="row container mx-auto">
+      <div class="col-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item m-1 ms-3"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active m-1 ms-3" aria-current="page">Entradas</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <main class="row">
+      <div class="col-md-8 col-12">
+        <h3 class="text-center my-3">Entradas</h3>
+        <hr>
+        <div class="row">
+          <div class="col-10 col-md-5 mx-auto entrada my-3 d-flex  flex-column h-auto justify-content-between">
+            <h4 class="text-center my-auto px-3 pt-3">Españoles destacados en el Maratón de Sevilla</h4>
+            <img class="w-75 mx-auto my-3" src="./assets/img/entrada1.png" alt="entrada1">
+            <p class="text-truncate my-3 mx-4">Los maratonianos internacionales Dani Mateo, Jorge Blanco y Laura Méndez
+              destacan
+              en el elenco de atletas de élite españoles que disputarán el próximo domingo 19 de febrero el Zúrich
+              Maratón de Sevilla y que ha sido presentado este martes. La organización presume de un grupo de atletas de
+              máximo nivel, con 30 hombres con marcas acreditadas en menos de 2 horas y 12 minutos y 20 mujeres por
+              debajo de 2h32.</p>
+              <div class="d-flex justify-content-evenly my-3">
+                <i class="bi bi-bar-chart-fill"><span>134545</span></i>
+                <i class="bi bi-heart-fill"><span>423</span></i>
+                <i class="bi bi-chat"><span>34</span></i>
+              </div>
+              <hr>
+              <div class="mb-3 d-flex justify-content-between">
+                <a class="link-secondary mx-3" href="#">Maratón</a>
+                <p class="text-truncate ms-5 me-3">#instarunners #runnersworld #runnerslife #worlderunners #runnershigh #runnerspace #worldrunners #wearetherunners #trailrunners</p>
+              </div>
+          </div>
+          <div class="col-10 col-md-5 mx-auto entrada my-3 d-flex flex-column h-auto justify-content-between">
+            <h4 class="text-center my-auto px-3 pt-3 ">321 kilómetros por un túnel oscuro</h4>
+            <img class="w-75 mx-auto my-3" src="./assets/img/entrada2.png" alt="entrada2">
+            <p class="text-truncate my-3 mx-4">La mayoría de la gente corre en la oscuridad por necesidad: madruga para
+              correr, sale a última hora de la tarde en invierno. Y el motivo no es otro que las obligaciones laborales,
+              familiares y sociales les impiden hacerlo a plena luz del día, especialmente cuando las horas de luz
+              escasean.</p>
+              <div class="d-flex justify-content-evenly my-3">
+                <i class="bi bi-bar-chart-fill"><span>4332</span></i>
+                <i class="bi bi-heart-fill"><span>24</span></i>
+                <i class="bi bi-chat"><span>2445</span></i>
+              </div>
+              <hr>
+              <div class="mb-3 d-flex justify-content-between">
+                <a class="link-secondary mx-3" href="#">Curiosidades</a>
+                <p class="text-truncate ms-5 me-3">#instarunners #runnersworld #runnerslife #worlderunners #runnershigh #runnerspace #worldrunners #wearetherunners #trailrunners</p>
+              </div>
           </div>
         </div>
 
-        
-
-        
 
 
-    </body>
-    
+        <div class="row">
+          <div class="col-10 col-md-5 mx-auto entrada my-3 d-flex  flex-column h-auto justify-content-between">
+            <h4 class="text-center my-auto px-3 pt-3">l Snow Running Sierra Nevada acogerá el próximo fin de semana a 1.300 atletas</h4>
+            <img class="w-75 mx-auto my-3" src="./assets/img/entrada3.png" alt="entrada3">
+            <p class="text-truncate my-3 mx-4">El último fin de semana del mes de enero acoge la primera prueba deportiva en la estación de esquí de Sierra Nevada. La Snow Running Sierra Nevada 2023 se celebrará este viernes, con su prueba Vertical de 4,3 km y el sábado con la Clásica de 12,7 kms.</p>
+            <div class="d-flex justify-content-evenly my-3">
+              <i class="bi bi-bar-chart-fill"><span>87</span></i>
+              <i class="bi bi-heart-fill"><span>24</span></i>
+              <i class="bi bi-chat"><span>54</span></i>
+            </div>
+            <hr>
+              <div class="mb-3 d-flex justify-content-between">
+                <a class="link-secondary mx-3" href="#">Carreras Populares</a>
+                <p class="text-truncate ms-5 me-3">#instarunners #runnersworld #runnerslife #worlderunners #runnershigh #runnerspace #worldrunners #wearetherunners #trailrunners</p>
+              </div>
+          </div>
+          <div class="col-10 col-md-5 mx-auto entrada my-3 d-flex flex-column h-auto justify-content-between">
+            <h4 class="text-center my-auto px-3 pt-3 ">Toni Abadía se pasa al duatlón en Fraga</h4>
+            <img class="w-75 mx-auto my-3" src="./assets/img/entrada4.png" alt="entrada4">
+            <p class="text-truncate my-3 mx-4">Sin intención de abandonar el atletismo, Toni Abadía se cambió de deporte y se estrenó este domingo en el X Duatlón Ciudad de Fraga (Huesca), donde terminó en quinto puesto, a 2:07 minutos del vencedor Javier Coscolla. Al zaragozano se le notó demasiado su especialización: ganó los dos tramos de carrera a pie de 5 y 2,5 kilómetros, pero sufrió en bicicleta, donde hasta 41 deportistas fueron más rápidos en los 21,5 kilómetros centrales.</p>
+            <div class="d-flex justify-content-evenly my-3">
+              <i class="bi bi-bar-chart-fill"><span>923</span></i>
+              <i class="bi bi-heart-fill"><span>214</span></i>
+              <i class="bi bi-chat"><span>524</span></i>
+            </div>
+            <hr>
+              <div class="mb-3 d-flex justify-content-between">
+                <a class="link-secondary mx-3" href="#">Duatlón</a>
+                <p class="text-truncate ms-5 me-3">#instarunners #runnersworld #runnerslife #worlderunners #runnershigh #runnerspace #worldrunners #wearetherunners #trailrunners</p>
+              </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4 col-12">
+        <aside>
+          <div class="mx-auto d-none d-md-inline">
+            <iframe class="mx-auto w-100" id="twitter-widget-1 iframe-responsivo" scrolling="yes" frameborder="0"
+              allowtransparency="true" allowfullscreen="true" class=""
+              style=" visibility: visible;;height: 700px; display: block; margin-right: 10px;" title="Twitter Timeline"
+              src="https://syndication.twitter.com/srv/timeline-profile/screen-name/RunningQuotes?dnt=false&amp;embedId=twitter-widget-1&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2Vuc2l0aXZlX21lZGlhX2ludGVyc3RpdGlhbF8xMzk2MyI6eyJidWNrZXQiOiJpbnRlcnN0aXRpYWwiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2V4cGVyaW1lbnRzX2Nvb2tpZV9leHBpcmF0aW9uIjp7ImJ1Y2tldCI6MTIwOTYwMCwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19ibHVlX3ZlcmlmaWVkX2JhZGdlIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2Zyb250ZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH19&amp;frame=false&amp;hideBorder=false&amp;hideFooter=false&amp;hideHeader=false&amp;hideScrollBar=false&amp;lang=en&amp;origin=https%3A%2F%2Fpublish.twitter.com%2F%23&amp;sessionId=cc6471aa300121ce7ad2d3a1200352370c07588f&amp;showHeader=true&amp;showReplies=false&amp;transparent=false&amp;widgetsVersion=a3525f077c700%3A1667415560940"></iframe>
+          </div>
+          <div>
+            <h4 class="mx-auto mt-5 mb-3  text-center">Siguenos en nuestras Redes Sociales</h4>
+            <div class="d-flex justify-content-between w-50 mx-auto mb-3">
+              <i class="bi bi-instagram redes-sociales "></i>
+              <i class="bi bi-twitter redes-sociales"></i>
+              <i class="bi bi-twitch redes-sociales"></i>
+            </div>
+          </div>
+        </aside>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide col-10 col-md-12 mx-auto"
+          data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="assets/img/foto1.jpg" class="d-block w-100" alt="foto1">
+              <div class="carousel-caption">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="assets/img/foto2.jpg" class="d-block w-100" alt="foto2">
+              <div class="carousel-caption">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/foto3.jpg" class="d-block w-100" alt="foto3">
+              <div class="carousel-caption">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer class="row mt-4 pt-3">
+      <div class="row">
+        <div class="col-3 m-auto">
+          <h4 class="text-center">Direccion:</h4>
+          <p class="text-center">C/Ejemplo nº12 Sevilla (Camas)</p>
+        </div>
+        <div class="col-3 m-auto">
+          <ul class="list-group-flush ps-0">
+            <li class="list-group-item text-center">
+              <a class="link-light" href="#">Login</a>
+            </li>
+            <li class="list-group-item text-center">
+              <a class="link-light" href="./registro.html">Register</a>
+            </li>
+            <li class="list-group-item text-center">
+              <a class="link-light" href="./index.html">Entradas</a>
+            </li>
+            <li class="list-group-item text-center">
+              <a class="link-light" href="#">Crear Nueva Entrada</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-3 m-auto">
+          <p class="text-center">
+            #runners #instarunners #runnersworld #runnerslife #worlderunners #runnershigh <span
+              class="d-none d-md-inline">#runnerspace #worldrunners #wearetherunners #trailrunners</span>
+          </p>
+
+        </div>
+        <div class="col-3 m-auto">
+          <ul class="list-group-flush ps-0">
+            <li class="list-group-item text-center">
+              Maratón
+            </li>
+            <li class="list-group-item text-center">
+              Carreras Populares
+            </li>
+            <li class="list-group-item text-center">
+              UltraMan
+            </li>
+            <li class="list-group-item text-center">
+              Carrera Nocturna
+            </li>
+            <li class="list-group-item text-center">
+              Trail
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-12">
+
+          <p class="text-center">
+            <i class="bi bi-c-circle"></i>
+            Oscar Alcala Espigares. Todos los derechos reservados
+          </p>
+        </div>
+
+      </div>
+    </footer>
+  </div>
+  <!-- Modal Login -->
+  <div class=" modal fade modal-fullscreen-sm-down" id="login" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="text-center">
+            <label class=" mt-4 mb-2 form-label" for="Username">Nombre de usuario:</label><br>
+            <input class="mx-auto w-50 form-control" type="text">
+            <label class=" mt-4 mb-2 form-label" for="password">Contraseña:</label><br>
+            <input class="mx-auto w-50 form-control" type="password">
+
+            <div class="form-check my-4 text-center">
+              <label class="form-check-label" for="invalidCheck">
+                <input class="form-check-input" type="checkbox">
+                Mantener sesión iniciada
+              </label>
+            </div>
+          </form>
+          <p class="text-center">
+            <a class="mb-4 link-primary" href="#">He olvidado la contraseña</a>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</body>
+
 </html>

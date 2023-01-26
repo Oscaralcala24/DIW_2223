@@ -1,15 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: "Quicksand";
+}
 header, footer{
     background-color: rgb(141, 244, 213);
 }
-footer{
-    background-color: black;
-}
-footer p,footer li,footer h4{
-    color: white !important;
-}
-footer p,footer li{
-    font-size: 0.8rem;
-}
+
+/*--------------------------- Header y Nav ------------------------------------------*/
+
 nav{
     background-color: rgb(234, 234, 234);
 }
@@ -23,19 +22,30 @@ li a p{
 li a img{
     width: 30%;
 }
+
+
+
+
+/*------------------------------- Aside -----------------------------------------*/
+
+i span{
+    font-style: normal;
+}
+.carousel-caption h5,.carousel-caption p{
+    opacity: 0.7;
+}
 .redes-sociales{
     font-size: 2em;
   }
 
+/*-------------------------------- Main -----------------------------------------*/
 
-.modal-body p a{
-    font-size: 0.7rem;
-}
-.boton-registro{
-    width: 40%;
-}
-footer hr{
-    color: white;
+.marcador{
+    top: 90%;
+    left: 90%;
+    font-size: 40px;
+    z-index: 2;
+    color: rgb(141, 244, 213);
 }
 .entrada{
     background-color:  rgb(234, 234, 234);
@@ -47,15 +57,38 @@ footer hr{
 }
 .entrada p, .entrada a{
     font-size: 2.5vw;
+    
 }
-i span{
-    font-style: normal;
+.entrada p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    overflow: hidden;
 }
-.carousel-caption h5,.carousel-caption p{
-    opacity: 0.7;
+.modal-body p a{
+    font-size: 0.7rem;
+}
+.boton-registro{
+    width: 40%;
+}
+
+/*------------------------------------- Footer ------------------------------------*/
+
+footer{
+    background-color: black;
+}
+footer p,footer li,footer h4{
+    color: white !important;
+}
+footer p,footer li{
+    font-size: 0.8rem;
+}
+footer hr{
+    color: white;
 }
 
 
+/*------------------------------------- Media --------------------------------------*/
 
 @media screen and (min-width:576px){
     .entrada h4{

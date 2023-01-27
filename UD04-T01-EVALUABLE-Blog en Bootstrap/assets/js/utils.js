@@ -1,8 +1,13 @@
-window.addEventListener("load", crearArray,false);
+window.addEventListener("load", iniciar,false);
 
 /**
  * *Funcion que crea un array de Comunidades autonomas y llama la funcion insertarSelectCCAA. Tambien creamos el listener del select
  */
+
+function iniciar(){
+    crearEvento();
+    crearArray();
+}
 function crearArray(){
     console.log("Entrando en la funcion crearArray");
     let arrayCCAA = [{id:"01",CCAA:"Andalucía"},{"id":"02","CCAA":"Aragón"},{"id":"03","CCAA":"Asturias, Principado de"},{"id":"04","CCAA":"Balears, Illes"},{"id":"05","CCAA":"Canarias"}
@@ -80,4 +85,25 @@ function insertarProvincias(idCCAA){
         select.add(option);
     }
     console.log("Saliendo de la funcion insertarProvincias");
+}
+
+
+function crearEvento(){
+
+    let objeto = document.getElementById("content").firstElementChild;
+    objeto.addEventListener("click", listener, false);
+}
+function listener(e){
+    let objeto = e.currentTarget;
+    quitarVideo(objeto);
+}
+
+function quitarVideo(objeto){
+    let contenedor = document.getElementById("contenedor");
+    contenedor.className = "container-fluid"
+    let video = document.body.firstElementChild;
+    video.className = "oculto";
+    document.getElementById("container").className = "container";
+    objeto.removeEventListener("click", listener, false);
+    video.remove();
 }

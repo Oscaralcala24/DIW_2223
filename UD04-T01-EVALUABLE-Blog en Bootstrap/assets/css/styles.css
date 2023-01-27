@@ -114,3 +114,55 @@ footer hr{
         font-size: 0.7vw;
     }
 }
+
+
+/*------------------------Mostrar Video-----------------------------
+*
+*/
+.oculto{
+    display: none;
+}
+
+#myVideo {
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 10001;
+  }
+
+#content{
+    top:2%;
+    right: 2%;
+}
+  #content,#animacion{
+    z-index: 10002;
+  }
+
+  .contenidoVideo{
+    z-index: 1000000;
+  }
+
+  .btn-close {
+    padding: 20px;
+    height: auto;
+    color: rgb(141, 244, 213);
+    z-index: 10002;
+    background-color: white;
+  }  
+  #content h1:hover {
+    cursor: pointer;
+    color: rgb(148, 148, 148);
+  }
+  .animacion {
+    width:100%;
+    height: 100px;
+    background: #536894;
+ 
+    bottom: 17%;
+    animation: mymove 5s ;
+    z-index: 10002;
+  }
+  
+  @keyframes mymove {
+    from {bottom: 100%;}
+    to {bottom: 17%;}
+  }

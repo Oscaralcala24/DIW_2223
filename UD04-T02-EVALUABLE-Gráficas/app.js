@@ -36,6 +36,34 @@ function iniciar(){
     }  
   })
 
+  crearGraficaMulti(grafica2,{
+        datasets: [{
+            type: 'bar',
+            label: 'Numero de Inscripciones 2022',
+            data: [2334, 2343, 2411, 7043,5331,2344,2112,443,1345,4332,1256,1223],
+        }, {
+            type: 'line',
+            label: 'Media Inscripciones 2022',
+            data: [2500, 2343, 2111, 6555,4433,2000,1000,800,1345,4332,1256,1223],
+            borderColor: 'rgb(75, 192, 192)'
+        }],
+        labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+    },{
+      plugins: {
+        title: {
+          display: true,
+          text: 'Gráfico con dos series',
+          color: 'red',
+          
+        },
+        subtitle: {
+          display: true,
+          text: 'Barras: Número de inscripciones en cada evento por cada mes del año 2022ª\nLínea: Media de inscripciones en el mes de todos los eventos por cada mes del año 2022.',
+          color: 'red',
+        }
+      }  
+    });
+    
 
 
   crearGrafica(grafica4,"pie",{
@@ -63,22 +91,36 @@ function iniciar(){
     }  
   })
 
-  let mapa = [{'5K':2500},{'10K':3200}, {'21K':2600}, {'42K':1200}]
+let pares = {'5K':2500,'10K':3200,'21K':2600,'42K':1200}
+let paresSort = Object.entries(pares).sort((a, b) => b[1] - a[1]);
+// const myMap = new Map();
+// myMap.set('5K',2500);
+// myMap.set('10K',3200);
+// myMap.set('21K',2600);
+// myMap.set('42K',1200);
+
+// // sort by value
+// const mapSort1 = new Map([...myMap.entries()].sort((a, b) => b[1] - a[1]));
+
+let labels = Object.keys();
+let data = Object.values(); 
 
 
-  let rankingOrdenado = Object.keys(mapa).sort().reduce(function (result, key) {
-    result[key] = mapa[key];
-    return result;
-  }, {});
+console.log(JSON.parse(JSON.stringify(labels)))
+console.log(data)
+// console.log(labels1)
+// console.log(data1)
 
+// for (let clave in mapSort1){
+//   console.log(mapSort1[clave]);
+// };
 
-  console.log(rankingOrdenado)
 
   crearGrafica(grafica5,"bar",{
-    labels: ['5K', '10K', '21K', '42K'],
+    labels: labels,
     datasets: [{
         label: 'Participacion',
-        data: [2500,3200,2600,1200].sort().reverse(),
+        data: data,
         borderColor: 'white',
         tension: 0.1,
         backgroundColor: ["red", "green", "blue", "purple"]
@@ -121,5 +163,10 @@ function crearGrafica(grafica,type,data,options){
 }
 
 
-
+function crearGraficaMulti(grafica,data,options){
+  new Chart(grafica, {
+    data: data,
+    options: options
+  });
+}
 

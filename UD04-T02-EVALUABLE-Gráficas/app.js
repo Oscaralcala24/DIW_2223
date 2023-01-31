@@ -7,8 +7,8 @@ function iniciar(){
     const grafica2 = document.getElementById('myChart2');
     const grafica3 = document.getElementById('myChart3');
     const grafica4 = document.getElementById('myChart4');
-    const grafica5 = document.getElementById('myChart5');
-    const grafica6 = document.getElementById('myChart6');
+
+ 
 
 
 
@@ -66,7 +66,7 @@ function iniciar(){
     
 
 
-  crearGrafica(grafica4,"pie",{
+  crearGrafica(grafica3,"pie",{
     labels: ['5K', '10K', '21K', '42K'],
     datasets: [{
         label: 'Participacion',
@@ -91,36 +91,12 @@ function iniciar(){
     }  
   })
 
-let pares = {'5K':2500,'10K':3200,'21K':2600,'42K':1200}
-let paresSort = Object.entries(pares).sort((a, b) => b[1] - a[1]);
-// const myMap = new Map();
-// myMap.set('5K',2500);
-// myMap.set('10K',3200);
-// myMap.set('21K',2600);
-// myMap.set('42K',1200);
 
-// // sort by value
-// const mapSort1 = new Map([...myMap.entries()].sort((a, b) => b[1] - a[1]));
-
-let labels = Object.keys();
-let data = Object.values(); 
-
-
-console.log(JSON.parse(JSON.stringify(labels)))
-console.log(data)
-// console.log(labels1)
-// console.log(data1)
-
-// for (let clave in mapSort1){
-//   console.log(mapSort1[clave]);
-// };
-
-
-  crearGrafica(grafica5,"bar",{
-    labels: labels,
+  crearGrafica(grafica4,"bar",{
+    labels:['5K', '10K', '21K', '42K'],
     datasets: [{
         label: 'Participacion',
-        data: data,
+        data: [3200,2600,2500,1200],
         borderColor: 'white',
         tension: 0.1,
         backgroundColor: ["red", "green", "blue", "purple"]

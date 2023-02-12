@@ -1,0 +1,26 @@
+#lightSwitch {
+  transform: scale(1.8);
+}
+
+.bg-light {
+  background-color: rgb(255, 255, 255) !important;
+  border-radius: 3px;
+  color: rgb(0, 0, 0);
+
+}
+
+.bg-dark {
+  background-color: rgb(0, 0, 0) !important;
+  color: rgb(255, 255, 255);
+
+}
+
+.div-eventos-light {
+  background-color:  rgb(234, 234, 234) !important;
+  color: rgb(0, 0, 0);
+
+}
+.div-eventos-dark {
+  background-color: rgb(71, 71, 71) !important;
+  color: rgb(255, 255, 255);
+}

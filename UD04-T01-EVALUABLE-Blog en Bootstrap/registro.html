@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <script defer src="assets/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
   <script defer src="assets/js/utils.js"></script>
+  <script defer src="./assets/js/switch.js"></script>
   <title>Document</title>
 </head>
 
@@ -18,7 +19,7 @@
 
     <header class="row sticky-top">
       <div class="col-12 text-center">
-        <img class="p-2 ps-3" src="assets/img/image.svg" alt="">
+        <img class="p-2 ps-3" src="assets/img/image.svg" alt="Logo WeRunning">
       </div>
       <div class="col-12 d-none d-md-inline">
         <h2 class="text-center ">WeRunning</h2>
@@ -51,12 +52,12 @@
             <div
               class="col-sm-4 col-12 d-flex align-items-center justify-content-center justify-content-sm-start flex-column flex-sm-row">
               <i class="bi bi-search mx-sm-4 my-2" data-bs-toggle="collapse" href="#collapseExample" role="button"
-                aria-expanded="false" aria-controls="collapseExample"></i>
+                aria-expanded="false" aria-controls="collapseExample" tabindex="0" aria-label="Botón busqueda"></i>
               <div class="collapse m-auto" id="collapseExample">
                 <form class="d-flex m-auto" id="collapseExample">
-                  <input class="form-control me-2 d-inline" type="search" placeholder="Search" aria-label="Search">
-                  <button type="button" class="btn btn-primary d-inline">
-                    <i class="bi bi-search"></i>
+                  <input class="form-control me-2 d-inline" type="search" placeholder="Introduce entrada" aria-label="Buscador">
+                  <button type="button" class="btn btn-primary d-inline" aria-label="buscar">
+                    <i class="bi bi-search" ></i>
                   </button>
                 </form>
               </div>
@@ -70,50 +71,50 @@
       <div class="col-12">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item m-1 ms-3"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active m-1 ms-3" aria-current="page">Registro</li>
+            <li class="breadcrumb-item m-1 ms-3" ><a href="#">Home</a></li>
+            <li class="breadcrumb-item active m-1 ms-3" aria-current="page" tabindex="0">Registro</li>
           </ol>
         </nav>
       </div>
     </div>
     
     <main class="row">
-      <a href="#" class="position-fixed d-none d-lg-inline marcador"><i class="bi bi-arrow-up-circle-fill"></i></a>
+      
       <div class="col-md-8 col-12">
-        <h3 class="text-center my-3">Registro</h3>
+        <h3 class="text-center my-3" tabindex="0">Registro</h3>
         <hr>
         <form class="text-md-center row g-3">
           <div class="col-10 mx-auto col-md-4">
             <label class="mt-4 mb-2 form-label" for="nombre">Nombre:*</label>
-            <input class="form-control" type="text">
+            <input class="form-control" type="text" name="nombre" aria-label="nombre" aria-required="true">
           </div>
           <div class="col-10 mx-auto col-md-4">
             <label class="mt-4 mb-2 form-label" for="apellidos">Apellidos:*</label>
-            <input class=" form-control" type="text">
+            <input class=" form-control" type="text" name="apellidos" aria-label="apellidos" aria-required="true">
           </div>
           <div class="col-10 mx-auto col-md-4">
             <label for="usernameInsta" class="mt-4 mb-2 form-label">Instagram</label>
             <div class="input-group">
-              <span class="input-group-text" id="inputGroupPrepend2">@</span>
-              <input type="text" class="form-control" id="usernameInsta" aria-describedby="inputGroupPrepend2" >
+              <span class="input-group-text" id="instagram">@</span>
+              <input type="text" class="form-control" aria-label="Cuenta de Instagram" >
             </div>
           </div>
           <div class="col-10 mx-auto col-md-4">
             <label class="mt-4 mb-2 form-label" for="email">Email:*</label>
             <div class="input-group">
-              <span class="input-group-text" id="inputGroupPrepend2"><i class="bi bi-envelope-fill"></i></span>
-              <input type="text" class="form-control" id="usernameInsta" aria-describedby="inputGroupPrepend2">
+              <span class="input-group-text" id="email"><i class="bi bi-envelope-fill"></i></span>
+              <input type="text" class="form-control"  aria-label="Cuenta de email" aria-required="true">
             </div>
           </div>
           <div class="col-10 mx-auto col-md-8">
-            <label class="mt-4 mb-2 form-label" for="direccion">Direccion:</label>
+            <label class="mt-4 mb-2 form-label" for="dirección">Direccion:</label>
             <div class="input-group">
-              <span class="input-group-text" id="inputGroupPrepend2"><i class="bi bi-geo-alt-fill"></i></span>
-              <input type="text" class="form-control" id="usernameInsta" aria-describedby="inputGroupPrepend2">
+              <span class="input-group-text" id="direccion"><i class="bi bi-geo-alt-fill"></i></span>
+              <input type="text" class="form-control" aria-label="direccion">
             </div>
           </div>
           <div class="col-10 mx-auto col-md-3">
-            <label class="mt-4 mb-2 form-label" for="CCAA">C.Autonoma:</label>
+            <label class="mt-4 mb-2 form-label" for="CCAA">C.Autónoma:</label>
             <select class="form-select" name="CCAA" id="CCAA">
               <option value="" selected disabled></option>
             </select>
@@ -126,21 +127,21 @@
           </div>
           <div class="col-10 mx-auto col-md-3">
             <label class="mt-4 mb-2 form-label" for="ciudad">Ciudad:</label>
-            <input class="form-control" type="text"></input>
+            <input class="form-control" type="text" aria-label="ciudad"></input>
           </div>
           <div class="col-10 mx-auto col-md-3">
             <label class="mt-4 mb-2 form-label" for="CP">Código Postal:</label><br>
             <input class="form-control" type="text" data-toggle="tooltip" data-placement="top"
-              title="Debe ser un numero de 5 cifras"></input>
+              title="Debe ser un numero de 5 cifras" aria-label="Codigo Postal"></input>
           </div>
           <div class="col-10 mx-auto col-md-6">
             <label for="descripcion" class="form-label">Sobre mi:</label>
             <textarea class="form-control" id="descripcion" placeholder="Introduce una breve descripción sobre ti"
-              rows="8"></textarea>
+              rows="8" aria-label="Descripcion sobre mi"></textarea>
           </div>
           <div class="col-12 row mx-auto">
             <div class=" col-10 col-sm-8  col-lg-6 my-4 text-center mx-auto">
-              <button type="reset" class="btn btn-secondary boton-registro">Reset</button>
+              <button type="reset" class="btn btn-secondary boton-registro">Resetear</button>
               <button type="submit" class="btn btn-primary boton-registro">Registrarse</button>
             </div>
           </div>
@@ -160,9 +161,9 @@
           <div>
             <h4 class="mx-auto mt-5 mb-3  text-center">Siguenos en nuestras Redes Sociales</h4>
             <div class="d-flex justify-content-between w-50 mx-auto mb-3">
-              <i class="bi bi-instagram redes-sociales "></i>
-              <i class="bi bi-twitter redes-sociales"></i>
-              <i class="bi bi-twitch redes-sociales"></i>
+              <i class="bi bi-instagram redes-sociales" aria-label="Icono instagram" tabindex="0"></i>
+              <i class="bi bi-twitter redes-sociales" aria-label="Icono twitter" tabindex="0"></i>
+              <i class="bi bi-twitch redes-sociales" aria-label="Icono twitch" tabindex="0"></i>
             </div>
           </div>
         </aside>
@@ -170,18 +171,18 @@
           data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
+              aria-current="true" aria-label="Noticia 1" tabindex="1"></button>
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
+              aria-label="Noticia 2" tabindex="1"></button>
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
+              aria-label="Noticia 3" tabindex="1"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
               <img src="assets/img/entrada2.png" class="d-block w-100" alt="foto1">
               <div class="carousel-caption">
-                <h5 class="rounded p-1 bg-light text-dark">Españoles destacados en el Maratón de Sevilla</h5>
-                <p class="rounded bg-light p-1 text-dark text-truncate my-3 mx-4">Los maratonianos internacionales Dani Mateo, Jorge Blanco
+                <h5 class="rounded p-1 bg-light text-dark" tabindex="0">Españoles destacados en el Maratón de Sevilla</h5>
+                <p class="rounded bg-light p-1 text-dark text-truncate my-3 mx-4" tabindex="0">Los maratonianos internacionales Dani Mateo, Jorge Blanco
                   y Laura Méndez
                   destacan
                   en el elenco de atletas de élite españoles que disputarán el próximo domingo 19 de febrero el Zúrich
@@ -191,15 +192,15 @@
             <div class="carousel-item" data-bs-interval="2000">
               <img src="assets/img/entrada3.png" class="d-block w-100" alt="foto2">
               <div class="carousel-caption">
-                <h5 class="rounded p-1 bg-light text-dark">l Snow Running Sierra Nevada</h5>
-                <p class="rounded bg-light p-1 text-dark text-truncate my-3 mx-4">El último fin de semana del mes de enero acoge la primera prueba deportiva en la estación de esquí de Sierra Nevada. La Snow Running Sierra Nevada 2023 se celebrará este viernes, con su prueba Vertical de</p>
+                <h5 class="rounded p-1 bg-light text-dark" tabindex="0">l Snow Running Sierra Nevada</h5>
+                <p class="rounded bg-light p-1 text-dark text-truncate my-3 mx-4" tabindex="0">El último fin de semana del mes de enero acoge la primera prueba deportiva en la estación de esquí de Sierra Nevada. La Snow Running Sierra Nevada 2023 se celebrará este viernes, con su prueba Vertical de</p>
               </div>
             </div>
             <div class="carousel-item">
               <img src="assets/img/entrada4.png" class="d-block w-100" alt="foto3">
               <div class="carousel-caption">
-                <h5 class="rounded p-1 bg-light text-dark">Toni Abadía se pasa al duatlón</h5>
-                <p class="rounded p-1 bg-light text-dark text-truncate my-3 mx-4">Sin intención de abandonar el atletismo, Toni Abadía se cambió de deporte y se estrenó este domingo en el X Duatlón Ciudad de Fraga</p>
+                <h5 class="rounded p-1 bg-light text-dark" tabindex="0">Toni Abadía se pasa al duatlón</h5>
+                <p class="rounded p-1 bg-light text-dark text-truncate my-3 mx-4" tabindex="0">Sin intención de abandonar el atletismo, Toni Abadía se cambió de deporte y se estrenó este domingo en el X Duatlón Ciudad de Fraga</p>
               </div>
             </div>
           </div>
@@ -218,50 +219,51 @@
           <hr>
         </div>
       </div>
+      <a href="#" class="position-fixed d-none d-lg-inline marcador"><i class="bi bi-arrow-up-circle-fill"></i></a>
     </main>
     <footer class="row mt-4 pt-3">
       <div class="row">
         <div class="col-3 m-auto">
-          <h4 class="text-center">Direccion:</h4>
-          <p class="text-center">C/Ejemplo nº12 Sevilla (Camas)</p>
+          <h4 class="text-center" tabindex="0">Direccion:</h4>
+          <p class="text-center" tabindex="0">C/Ejemplo nº12 Sevilla (Camas)</p>
         </div>
         <div class="col-3 m-auto">
           <ul class="list-group-flush ps-0">
             <li class="list-group-item text-center">
-              <a type="button" class="link-light" href="#" data-bs-toggle="modal" data-bs-target="#login">Login</a>
+              <a type="button" class="link-light" href="#" data-bs-toggle="modal" data-bs-target="#login" tabindex="0">Login</a>
             </li>
             <li class="list-group-item text-center">
-              <a class="link-light" href="./registro.html">Register</a>
+              <a class="link-light" href="./registro.html" tabindex="0">Register</a>
             </li>
             <li class="list-group-item text-center">
-              <a class="link-light" href="./index.html">Entradas</a>
+              <a class="link-light" href="./index.html" tabindex="0">Entradas</a>
             </li>
             <li class="list-group-item text-center">
-              <a class="link-light" href="#">Crear Nueva Entrada</a>
+              <a class="link-light" href="#" tabindex="0">Crear Nueva Entrada</a>
             </li>
           </ul>
         </div>
         <div class="col-3 m-auto">
-          <p class="text-center">
-            #runners #instarunners #runnersworld #runnerslife #worlderunners #runnershigh <span class="d-none d-md-inline">#runnerspace #worldrunners #wearetherunners #trailrunners</span>   
+          <p class="text-center" tabindex="0" aria-label="Hastags running">
+            #runners #instarunners #runnersworld #runnerslife #worlderunners #runnershigh <span
+              class="d-none d-md-inline">#runnerspace #worldrunners #wearetherunners #trailrunners</span>
           </p>
-
         </div>
         <div class="col-3 m-auto">
           <ul class="list-group-flush ps-0">
-            <li class="list-group-item text-center">
+            <li class="list-group-item text-center" tabindex="0" aria-label="Categoria Maratón">
               Maratón
             </li>
-            <li class="list-group-item text-center">
+            <li class="list-group-item text-center" tabindex="0" aria-label="Categoria Carreras Populares">
               Carreras Populares
             </li>
-            <li class="list-group-item text-center">
+            <li class="list-group-item text-center" tabindex="0" aria-label="Categoria UltraMan"> 
               UltraMan
             </li>
-            <li class="list-group-item text-center">
+            <li class="list-group-item text-center" tabindex="0" aria-label="Categoria Carrera Nocturna">
               Carrera Nocturna
             </li>
-            <li class="list-group-item text-center">
+            <li class="list-group-item text-center" tabindex="0" aria-label="Categoria Trail">
               Trail
             </li>
           </ul>
@@ -270,13 +272,11 @@
       <hr>
       <div class="row">
         <div class="col-12">
-          
-          <p class="text-center">
+          <p class="text-center" tabindex="0">
             <i class="bi bi-c-circle"></i>
             Oscar Alcala Espigares. Todos los derechos reservados
-          </p>                
+          </p>
         </div>
-        
       </div>
     </footer>
   </div>
@@ -292,19 +292,17 @@
         <div class="modal-body">
           <form class="text-center">
             <div class="input-group w-50 mx-auto my-4">
-              <span class="input-group-text" id="inputGroupPrepend2"><i class="bi bi-person-fill"></i></span>
-              <input type="text" class="form-control" id="usernameInsta" placeholder="Usuario" aria-describedby="inputGroupPrepend2" >
+              <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+              <input type="text" class="form-control"  placeholder="Usuario" aria-label="Usuario" >
             </div>
-            
-            
             <div class="input-group w-50 mx-auto">
-              <span class="input-group-text" id="inputGroupPrepend2"><i class="bi bi-key-fill"></i></span>
-              <input type="text" class="form-control" id="usernameInsta" placeholder="Contraseña" aria-describedby="inputGroupPrepend2">
+              <span class="input-group-text" ><i class="bi bi-key-fill"></i></span>
+              <input type="text" class="form-control" placeholder="Contraseña" aria-label="Contraseña">
             </div>
 
             <div class="form-check my-4 text-center">
-              <label class="form-check-label" for="invalidCheck">
-                <input class="form-check-input" type="checkbox">
+              <label class="form-check-label" for="sesion">
+                <input class="form-check-input" type="checkbox" id="sesion">
                 Mantener sesión iniciada
               </label>
             </div>

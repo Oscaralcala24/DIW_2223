@@ -22,6 +22,10 @@ li a p{
 li a img{
     width: 30%;
 }
+.icono-sun{
+    font-size: 20px;
+    width: 20px;
+}
 
 
 
@@ -32,7 +36,7 @@ i span{
     font-style: normal;
 }
 .carousel-caption h5,.carousel-caption p{
-    opacity: 0.7;
+   
 }
 .redes-sociales{
     font-size: 2em;
@@ -86,6 +90,9 @@ footer p,footer li{
 footer hr{
     color: white;
 }
+footer hr:first-of-type{
+    margin: 0px;
+}
 
 
 /*------------------------------------- Media --------------------------------------*/
@@ -97,6 +104,7 @@ footer hr{
     .entrada p, .entrada a{
         font-size: 2vw;
     }
+
 }
 @media screen and (min-width:768px){
     .entrada h4{
@@ -124,8 +132,13 @@ footer hr{
 }
 
 #myVideo {
+    top: 0;
+    left: 0;
     min-width: 100%;
     min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    
     z-index: 10001;
   }
 
@@ -138,7 +151,9 @@ footer hr{
   }
 
   .contenidoVideo{
-    z-index: 1000000;
+    top: 0;
+    left: 0;
+    height: auto;
   }
 
   .btn-close {
@@ -157,12 +172,91 @@ footer hr{
     height: 100px;
     background: #536894;
  
-    bottom: 17%;
+    bottom: 20%;
     animation: mymove 5s ;
     z-index: 10002;
   }
   
   @keyframes mymove {
     from {bottom: 100%;}
-    to {bottom: 17%;}
+    to {bottom: 20%;}
+  }
+  .ajusteVideo{
+    width: 85%;
+    margin: auto;
+  }
+
+
+  /*-----------------Switch Dark mode----------------------*/
+
+  .boton-switch {
+    width:75px;
+    height:30px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+    cursor: pointer;
+  }
+
+  .boton-switch:after {
+    content: "";
+    width:27px;
+    height: 27px;
+    position: absolute;
+    top:1.5px;
+    left:1.5px;
+    background: linear-gradient(180deg,#ffffff,#a38d8d);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+  }
+  .input-switch {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  .input-switch:checked + .boton-switch {
+    background: #242424;
+  }
+  .input-switch:checked + .boton-switch:after {
+    left:73.5px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg,#777,#3a3a3a);
+  }
+  .boton-switch, .boton-switch:after {
+    transition: 0.3s
+  }
+  .boton-switch:active:after{ 
+    width: 39px; 
+  }
+
+
+  .input-switch:checked + .boton-switch + .background {
+    background:#242424;
+  }
+
+
+  .boton-switch i {
+    position: absolute;
+    width: 18px;
+    top:3.5px;
+    z-index: 100;
+  }
+  .boton-switch i.sun {
+    left:6px;
+    fill:#fff;
+    transition: 0.3s;
+  }
+  .boton-switch i.moon {
+    left:53px;
+    fill:#7e7e7e;
+    transition: 0.3s;
+  }
+  .input-switch:checked + .boton-switch i.sun {
+    fill:#7e7e7e;
+  }
+  .input-switch:checked + .boton-switch i.moon {
+    fill:#fff;
   }

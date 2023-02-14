@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
-  <script src="assets/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/custom.css">
-  <script defer src="./assets/js/utils.js"></script>
+  <script defer src="assets/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
+  <script defer src="assets/js/utils.js"></script>
   <script defer src="./assets/js/switch.js"></script>
   <title>Document</title>
   
@@ -34,11 +34,11 @@
   </div>
   <div class="container-fluid oculto" id="contenedor">
     
-    <header class="row sticky-">
-      <div class="col-8 ms-auto text-center">
+    <header class="row sticky-top">
+      <div class="col-4 ms-auto text-center">
         <img class="p-2 ps-3 " src="assets/img/image.svg" alt="Logo WeRunning">
       </div>
-      <div class="form-check  form-switch col-2 ">
+      <div class="form-check  form-switch col-4 ">
         <input type="checkbox" id="lightSwitch" class="input-switch"/>
         <label for="lightSwitch" class="boton-switch ms-auto"> 
           <i class="bi bi-moon moon"></i>
@@ -76,10 +76,10 @@
             </ul>
             <div
               class="col-sm-4 col-12 d-flex align-items-center justify-content-center justify-content-sm-start flex-column flex-sm-row">
-              <i class="bi bi-search mx-sm-4 my-2" data-bs-toggle="collapse" href="#collapseExample" role="button"
-                aria-expanded="false" aria-controls="collapseExample" tabindex="0" aria-label="Botón busqueda"></i>
-              <div class="collapse m-auto" id="collapseExample">
-                <form class="d-flex m-auto" >
+              <a class="bi bi-search mx-sm-4 my-2 text-light" data-bs-toggle="collapse" href="#buscador" role="button"
+                aria-expanded="false" aria-controls="buscador" tabindex="0" aria-label="Botón busqueda"></a>
+              <div class="m-auto collapse" id="buscador">
+                <form class="d-flex m-auto">
                   <input class="form-control me-2 d-inline" type="search" placeholder="Introduce entrada" aria-label="Buscador">
                   <button type="button" class="btn btn-primary d-inline" aria-label="buscar">
                     <i class="bi bi-search"></i>
@@ -162,7 +162,7 @@
               1.300 atletas</h4>
             <img class="w-75 mx-auto my-3" src="./assets/img/entrada3.png" alt="entrada3">
             <p class="text-center my-3 mx-4">El último fin de semana del mes de enero acoge la primera prueba deportiva
-              en la estación de esquí de Sierra Nevada. La Snow Running Sierra Nevada 2023 se celebrará este viernes,
+              en la estación de esquí de Sierra Nevada. La <abbr title="Snow Running Sierra Nevada">SRSN</abbr> 2023 se celebrará este viernes,
               con su prueba Vertical de 4,3 km y el sábado con la Clásica de 12,7 kms.</p>
             <div class="d-flex justify-content-evenly my-3">
               <i class="bi bi-bar-chart-fill"><span>87</span></i>
@@ -185,7 +185,7 @@
             <img class="w-75 mx-auto my-3" src="./assets/img/entrada4.png" alt="entrada4">
             <p class="text-center my-3 mx-4">Sin intención de abandonar el atletismo, Toni Abadía se cambió de deporte y
               se estrenó este domingo en el X Duatlón Ciudad de Fraga (Huesca), donde terminó en quinto puesto, a 2:07
-              minutos del vencedor Javier Coscolla. Al zaragozano se le notó demasiado su especialización: ganó los dos
+              minutos del vencedor <em>Javier Coscolla</em>. Al zaragozano se le notó demasiado su especialización: ganó los dos
               tramos de carrera a pie de 5 y 2,5 kilómetros, pero sufrió en bicicleta, donde hasta 41 deportistas fueron
               más rápidos en los 21,5 kilómetros centrales.</p>
             <div class="d-flex justify-content-evenly my-3">
@@ -271,8 +271,7 @@
           </button>
         </div>
       </div>
-      <a href="#" class="position-fixed d-none d-lg-inline marcador"><i class="bi bi-arrow-up-circle-fill"></i></a>
-      
+      <a href="#" class="position-fixed d-none d-lg-inline marcador"><i class="bi bi-arrow-up-circle-fill"></i></a>   
     </main>
     <footer class="row mt-4">
       <hr class="mb-3">
@@ -372,6 +371,6 @@
       </div>
     </div>
   </div>
-  <script src="./assets/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
+  
 </body>
 </html>

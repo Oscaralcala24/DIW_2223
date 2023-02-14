@@ -26,7 +26,7 @@
     document.querySelectorAll('.text-carousel-light').forEach((element) => {
       element.className = element.className.replace(/-light/g, '-dark');
     });
-
+    
     document.body.className = 'bg-dark';
 
     if (document.body.classList.contains('text-dark')) {
